@@ -20,7 +20,9 @@ public class Robot {
 	}
 
 	@Autowired
-	public void setSpeech(@Value("#{randomText.text}")String speech) {
+	//new java.util.Date().toString()
+	//T(Math).PI
+	public void setSpeech(@Value("#{T(Math).sin(T(Math).PI/4) ^ 2 lt 0.8}")String speech) {
 		this.speech = speech;
 	}
 	
