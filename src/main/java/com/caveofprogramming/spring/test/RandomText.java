@@ -2,6 +2,9 @@ package com.caveofprogramming.spring.test;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class RandomText {
 	
 	private static String[] texts = {
