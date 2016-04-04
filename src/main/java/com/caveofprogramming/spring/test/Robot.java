@@ -15,14 +15,12 @@ public class Robot {
 	}
 
 	@Autowired
-	public void setId(@Value("#{randomText.text?.length()}")String id) {
+	public void setId(@Value("${jdbc.user}") String id) {
 		this.id = id;
 	}
 
 	@Autowired
-	//new java.util.Date().toString()
-	//T(Math).PI
-	public void setSpeech(@Value("#{T(Math).sin(T(Math).PI/4) ^ 2 lt 0.8}")String speech) {
+	public void setSpeech(@Value("${jdbc.password}") String speech) {
 		this.speech = speech;
 	}
 	
