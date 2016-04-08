@@ -21,7 +21,10 @@ public class App {
 			for (Offer offer : offers) {
 				System.out.println(offer);
 			}
-		} catch (DataAccessException ex) {
+			Offer offer = offersDao.getOffer(2);
+			System.out.println(offer);
+			
+		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 			System.out.println(ex.getClass());
 
