@@ -22,8 +22,12 @@ public class App {
 				System.out.println(offer);
 			}
 			Offer offer = offersDao.getOffer(2);
-			System.out.println(offer);
+			System.out.println("Should be mike: "+offer);
 			
+			offer = offersDao.getOffer(6);
+			System.out.println("Should be joe: "+offer);
+			
+			System.out.println(offersDao.delete(6));
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 			System.out.println(ex.getClass());
