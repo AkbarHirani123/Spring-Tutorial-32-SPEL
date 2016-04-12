@@ -16,31 +16,11 @@ public class App {
 
 		OffersDAO offersDao = (OffersDAO) context.getBean("offersDAO");
 
-		Offer offer4 = new Offer(8, "Claire", "claire@caveofprogramming.com",
-				"tester");
-
-		if (offersDao.update(offer4))
-			System.out.println("Object updated");
-		else
-			System.out.println("Object not updated");
-
 		try {
-			// Offer offer1 = new Offer("Dave",
-			// "dave@caveofprogramming.com","coding java");
-			// Offer offer2 = new Offer("Karen",
-			// "karen@caveofprogramming.com","software testing");
-			//
-			// if(offersDao.create(offer1))
-			// System.out.println("Created offer object");
-			//
-			// if(offersDao.create(offer2))
-			// System.out.println("Created offer object");
-			//
-
 			List<Offer> offers1 = new ArrayList<Offer>();
-			offers1.add(new Offer("Cave", "cave@caveofprogramming.com",
-					"hello cave"));
-			offers1.add(new Offer("Karen", "karen@caveofprogramming.com",
+			 offers1.add(new Offer(3, "Cave", "cave@caveofprogramming.com",
+			 "hello cave"));
+			offers1.add(new Offer(4, "Karen", "karen@caveofprogramming.com",
 					"cash for software"));
 
 			int[] rvals = offersDao.create(offers1);
@@ -54,13 +34,6 @@ public class App {
 			for (Offer offer : offers) {
 				System.out.println(offer);
 			}
-			Offer offer3 = offersDao.getOffer(2);
-			System.out.println("Should be mike: " + offer3);
-
-			// offer = offersDao.getOffer(6);
-			// System.out.println("Should be joe: " + offer);
-			//
-			// System.out.println(offersDao.delete(6));
 		} catch (Exception ex) {
 			System.out.println(ex.getMessage());
 			System.out.println(ex.getClass());
